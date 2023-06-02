@@ -260,8 +260,10 @@ class _HomePageState extends State<HomePage> {
     if (_pickedFile != null) {
       final croppedFile = await ImageCropper().cropImage(
         sourcePath: _pickedFile!.path,
+        maxHeight: 1718,
+        maxWidth: 1718,
         compressFormat: ImageCompressFormat.jpg,
-        compressQuality: 100,
+        compressQuality: 30,
         uiSettings: [
           AndroidUiSettings(
               toolbarTitle: 'Cropper',
