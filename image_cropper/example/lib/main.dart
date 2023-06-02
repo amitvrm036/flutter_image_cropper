@@ -264,15 +264,18 @@ class _HomePageState extends State<HomePage> {
         maxWidth: 1718,
         compressFormat: ImageCompressFormat.jpg,
         compressQuality: 30,
+        aspectRatio: const CropAspectRatio(ratioX: 5.0, ratioY: 6.0),
+        aspectRatioPresets: [CropAspectRatioPreset.square, CropAspectRatioPreset.ratio16x9],
         uiSettings: [
           AndroidUiSettings(
               toolbarTitle: 'Cropper',
               toolbarColor: Colors.deepOrange,
               toolbarWidgetColor: Colors.white,
               initAspectRatio: CropAspectRatioPreset.original,
-              lockAspectRatio: false),
+              lockAspectRatio: true),
           IOSUiSettings(
             title: 'Cropper',
+            aspectRatioLockEnabled: true,
           ),
           WebUiSettings(
             context: context,

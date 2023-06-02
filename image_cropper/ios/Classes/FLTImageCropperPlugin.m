@@ -75,6 +75,7 @@
       
       if (ratioX != (id)[NSNull null] && ratioY != (id)[NSNull null]) {
           cropViewController.customAspectRatio = CGSizeMake([ratioX floatValue], [ratioY floatValue]);
+          cropViewController.customAspectRatioName = @"5:6";
           cropViewController.resetAspectRatioEnabled = NO;
           cropViewController.aspectRatioPickerButtonHidden = YES;
           cropViewController.aspectRatioLockDimensionSwapEnabled = YES;
